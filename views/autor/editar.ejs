@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu2.ejs') %>
+<body>
+
+<br>
+<div class="container">
+    <div class="card">
+        <div class="card-header">Editar Autor</div>
+        <div class="card-body">
+            <form method="POST" action="/autors/salvar">  <!-- Envia os dados para a rota "/autores/salvar" quando o formulário é enviado -->
+                <input type="hidden" name="id" value="<%= autor.id %>"></input>
+                <div class="form-floating mb-3">
+                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome do Autor" value="<%= autor.nome %>" required></input>
+                    <label for="nome">Nome do Autor</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" name="nascimento" class="form-control" id="nascimento" placeholder="Data de Nascimento" value="<%= autor.nascimento %>" required></input>
+                    <label for="nascimento">Data de Nascimento</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" name="morte" class="form-control" id="morte" placeholder="Data da Morte" value="<%= autor.morte %>" ></input>
+                    <label for="senha">Data da Morte</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a href="/autores" class="btn btn-warning">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %></br>
+
+</body>
+</html>

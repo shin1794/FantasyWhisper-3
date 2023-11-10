@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu2.ejs') %>
+
+<link rel="stylesheet" type="text/css" href="../../public/css/estilo.css"></link>
+
+<body class="body">
+
+<br></br>
+<div class=" w3-display-middle">
+    <a href="/historias/novo"  class="btn btn-primary">Nova Historia</a>
+    <br></br>
+    <div >
+    <div class="card"  >
+        <div class="card-header">Minhas histórias</div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Capítulo</th>
+                        <th>Conteúdo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% historias.forEach(function(historia) { %>
+                        <tr>
+                            <td><%= historia.titulo %></td>
+                            <td><%= historia.capitulo %></td>
+                            <td><%= historia.conteudo %></td>
+                        </tr>
+                         <td>
+                            <a href="/historias/<%= historia.id %>" class="btn btn-primary">Editar</a> 
+                            <a href="/historias/delete/<%= historia.id %>" class="btn btn-danger">Excluir</a>
+                        </td>
+                    <% }); %>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</div>
+<br></br>
+
+</body>
+</html>

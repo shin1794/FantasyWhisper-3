@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+<head>
+  <!-- Estilo customizado -->
+  <link rel="stylesheet" type="text/css" href="public/css/estilo.css"></link>
+  <title>FW - Cadastro</title>
+</head>
+
+<%- include('../partials/head.ejs') %>
+
+<body class="body">
+
+<!-- Inicio do Cabeçalho -->
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light" 
+        style="background-color: #660066">
+      <div class="container">
+        <div style="position: top ;">
+            <img src="img/modelo-de-logotipo-de-educacao-de-livro_617585-439-removebg-preview.png" width="100px"></img> <!-- Logo -->
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto" style="padding: 10px">
+            <li class="nav-item">
+              <a href="../home" class="btn btn-outline-light ml-4 w3-cursive">SAIR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!--/Fim do Cabeçalho -->
+
+<section>
+
+<div class="container">
+  <div>
+
+<h1>Primeira sessão</h1>
+
+  </div>
+</div>
+
+
+</section>
+
+<section>
+
+<!-- Inicio formulário de Cadastro -->
+    <div class="container">
+      <div class="caixa">
+        <h2>Cadastro</h2>
+      </div>
+      <div class="card-body">
+        <form method="post" action="../principal">
+          <div>
+            <div class="form-floating mb-3">
+              <input 
+                type="text" 
+                name="nome" 
+                id="nome" 
+                class="form-control"
+                placeholder="Digite seu nome" 
+                required>
+              </input>
+              <label class="w3-cursive" for="nome">Nome</label>
+            </div>
+          </div>
+
+          <div>
+            <div class="form-floating mb-3">
+              <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                class="form-control" 
+                placeholder="Digite seu e-mail"
+                required>
+              </input>
+              <label class="w3-cursive" for="email">E-mail</label>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input 
+              type="password" 
+              name="senha" 
+              id="senha" 
+              class="form-control"
+              placeholder="Digite sua senha" 
+              required>           
+            </input>
+            <label class="w3-cursive" for="senha">Senha</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <button 
+              type="submit" 
+              class="btn btn-primary w3-cursive">Salvar
+            </button>
+            <a href="../home" class="btn btn-warning w3-cursive">Cancelar</a>
+          </div>
+        </form>
+        </div>
+    </div>
+    <!-- Fim do Formulário de Cadastro -->
+
+</section>
+
+<section>
+<div class="container">
+  <div>
+    <h1>Terceira sessão</h1>
+  </div>
+</div>
+
+</section>
+
+
+<%- include('../partials/footer.ejs') %>
+
+</body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu2.ejs') %>
+
+<link rel="stylesheet" type="text/css" href="../../public/css/estilo.css"></link>
+
+<body>
+    <section class="container">
+        <br></br>
+        <div style="margin-top: 120px; margin-bottom:120px">
+            <div class="card">
+                <div class="card-header">
+                    Editar História
+                </div>
+                    <div class="card-body">
+                        <form method="POST" action="/historia/salvar">
+                        <input type="hidden" name="id" value="<%= historia.id %>"></input>
+                        <div class="form-floating mb-3">
+                            <input 
+                                type="text" 
+                                name="titulo" 
+                                id="titulo" 
+                                class="form-control" 
+                                placeholder="Titulo da História" 
+                                value="<%= historia.titulo %>"
+                                required>
+                            <label for="historia">Tituo da História</label>
+                            </input>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input 
+                                type="text" 
+                                name="capitulo" 
+                                id="capitulo" 
+                                class="form-control" 
+                                placeholder="Capitulo" 
+                                value="<%= historia.capitulo %>"
+                                required>
+                                <label for="capitulo">Capitulo da História</label>
+                            </input>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <select class="form-control" name="autorId" id="autorId">
+                                <% autores.forEach(autor => { 
+                                    if(autor.id == historia.autorId) {%>
+                                    <option value="<%= autor.id %>" selected><%= autor.nome %></option>
+                                    <% 
+                                    }
+                                    else
+                                    {%>
+                                    <option value="<%= autor.id %>"><%= autor.nome %></option>
+                                <%}})%>
+                            </select>
+                            <label for="autorId">Selecione o autor</label>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <select class="form-control" name="generoId" id="generoId">
+                                <% generos.forEach(genero => { 
+                                    if(genero.id == historia.generoId) {%>
+                                    <option value="<%= genero.id %>" selected><%= genero.genero %></option>
+                                    <%
+                                    }
+                                    else
+                                    {
+                                    %>
+                                    <option value="<%= genero.id %>"><%= genero.genero %></option>
+                                <%}})%>
+                            </select>
+                            <label for="generoId">Selecione o genero</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input 
+                                type="text" 
+                                name="conteudo" 
+                                id="conteudo" 
+                                class="form-control" 
+                                placeholder="Conteudo" 
+                                value="<%= historia.conteudo %>"
+                                required>
+                                <label for="conteudo">Conteudo</label>
+                            </input>
+                        </div>
+                        
+                <div class="form-floating mb-3">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a href="/historias" class="btn btn-warning">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </section>
+<%- include('../partials/footer.ejs') %>
+</body>

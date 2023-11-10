@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head.ejs') %>
+
+<body class="body">
+<!-- Inicio do Cabeçalho -->
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light" 
+        style="background-color: #660066">
+      <div class="container">
+        <div style="position: top ;">
+          <a href="" class="css/estilo.css">
+            <img src="img/modelo-de-logotipo-de-educacao-de-livro_617585-439-removebg-preview.png" width="100px"></img> <!-- Logo -->
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto" style="padding: 10px">
+            <li class="nav-item">
+              <a href="home" class="btn btn-outline-light ml-4">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!--/Fim do Cabeçalho -->
+
+    <section>
+        <div class="container">
+            <div id="fundo">
+                <a href="/usuarios/novo" class="btn btn-primary">Novo Usuário</a>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        Usuários Cadastrados
+                    </div>
+
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <th class="col-5">Nome do Usuário</th>
+                                <th class="col-5">E-mail</th>
+                                <th class="col-2">Ações</th>
+                            </thead>
+                            <tbody>
+                                <% usuarios.forEach(usuario => { %>
+                                    <tr>
+                                        <td><%= usuario.nome %></td>
+                                        <td><%= usuario.email %></td>
+                                        <td>
+                                            <a href="/usuarios/<%= usuario.id %>" class="btn btn-primary">Editar</a>
+                                            <a href="/usuarios/delete/<%= usuario.id %>" class="btn btn-danger">Excluir</a>
+                                            <a href="/home" class="btn btn-primary">Cancelar</a>
+                                        </td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<%- include('../partials/footer.ejs') %>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+/*Configurações para o HOME*/
+#home{
+  background-image: radial-gradient(circle at 50% 50%, #93a7fd 0, #a0a4fa 16.67%, #ada0f7 33.33%, #b99df2 50%, #c49aed 66.67%, #ce97e7 83.33%, #d794e0 100%)
+}
+
+#grad{
+  background-image: left bottom linear-gradient(rgb(0, 38, 255), rgb(136, 0, 255));
+}
+
+/*Configurações para o BODY */
+.body{
+    background-image: url("../img/fundo5.avif "); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pagina{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    top:0%;
+  }
+
+.caixa{
+  padding: 20px 0;
+  border-bottom: 2px solid  rgb(172, 165, 222), 148, 232;
+}
+
+footer p a {
+	margin: 5px 15px;
+}
+
+.topo{
+    padding-top: 150px;
+    padding-right: 20px;
+    background: #379cd3;
+    width: 150px;
+}
+
+.design {
+    padding-top: 5vh;
+    background-image: url('../img/background-anime-duong-pho-ve-dem.jpeg');
+    background-size: cover;
+    background-position-y: -100px;
+  }
+
+  .imagemFundo {
+    background-image: url('../img/background-anime-duong-pho-ve-dem.jpeg');
+    background-size: 100% 100%; /* Opção para redimensionar a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem de fundo */
+    background-position: center;
+    background-color: #cccccc; /* Used if the image is unavailable */
+    width: 100%; /* Defina largura e altura para o container, se desejado */
+    height: 500%;
+    color: #ffffff; /* Cor do texto dentro do container, para melhor legibilidade */    
+    
+  }
+
+  .fundoCapa {
+    background-size: 100% 100%; /* Opção para redimensionar a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem de fundo */
+    background-position: center;
+    width: 100%; /* Defina largura e altura para o container, se desejado */
+    height: 100%;
+    color: #ffffff; /* Cor do texto dentro do container, para melhor legibilidade */  
+    object-fit: cover;
+  }
+
+  .textoNoMeio {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    height: 100vh; /* Garante que o container ocupe a altura total da janela */
+  }
+
+  .imagemFixa{
+        background-image: url("../img/true-beauty-1.jpg");
+        background-repeat: no-repeat;
+        background-position: right top;
+        margin-right: 200px;
+        background-attachment: fixed;
+  }
+
+  .collapse {
+    top: 0;
+  }
+
+  .bg-warning {
+    background-color: #9f94f5 !important;
+  }
+  
+  .teste{
+     border: 2px solid #000000; /* Largura de 2 pixels, estilo sólido e cor preta (#000) */
+  }
+
+  .nav { 
+    background: pink;
+    margin: 0;
+    width: 100%;
+    height: 200px;
+  }
+
+ a {
+  text-decoration: none;
+}
+
+.imagem-perfil {
+  background: url("../img/c943a06cbb07eeba97b4af0ab7d650ef-removebg-preview.png");
+  width: 20 px;
+  height: 60px;
+}
+
+.cor-fundo{
+  background-color: rgb(229, 234, 238)
+}
+
+/* geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+input, label {
+  display: block;
+  outline: none;
+  width: 100%;
+}
+
+a {
+  color: #fefcff;
+}
+
+.fundo {
+      padding-top: 5vh;
+      background-image: url('../img/background-anime-duong-pho-ve-dem.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;   
+}
+
+/* formulário de Login */
+#main-container-login {
+  width: 600px;
+  height: 400px;
+  margin-top: 120px;
+  margin-bottom: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+  border-radius: 100px;
+  padding: 50px;
+}
+
+/* formulário de Cadastro*/
+#main-container-cadastro {
+  width: 600px;
+  height: 400px;
+  margin-top: 120px;
+  margin-bottom: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+  border-radius: 100px;
+  padding: 50px;
+}
+
+.main-container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 3rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.full-box {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.half-box {
+  flex: 1 1 50%;
+  position: relative;
+}
+
+.spacing {
+  margin-right: 2.5%;
+}
+
+label {
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+input {
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: .9rem;
+  margin-bottom: 40px;
+}
+
+input:focus {
+  border-color: #a383e7;
+}
+
+input[type="submit"] {
+  background-color: rgb(177, 110, 236);
+  color: #FFF;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#agreement {
+  margin-right: 5px;
+}
+
+#agreement, #agreement-label {
+  display: inline-block;
+  width: auto;
+}
+
+.error-validation {
+  color: #ff1a1a;
+  position: absolute;
+  top: 57px;
+  font-size: 12px;
+}
+
+.template {
+  display: none;
+}
+
+.alinhar-centro{
+  text-align: center;
+}
+
+.container-centralizado {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%;
+  height: 100vh; /* Ajusta a altura de acordo com a altura da janela do navegador */
+  background-color: #f0f0f0;
+}
+
+.conteudo-centralizado {
+  text-align: center; /* Centraliza o texto dentro do conteúdo */
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+ .imagem-pequena{
+  width: 250px;
+  height: 150px;
+ }
+
+ /* Centralizar a imagem no lado direito */
+.img-home2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%; /* Ajuste a largura desejada */
+  height: 100%; /* Mantém a proporção original da imagem */
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+

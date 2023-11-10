@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu2.ejs') %>
+
+<body class="body">
+    <div class="container">
+        <a href="/autores/novo" class="btn btn-primary">Novo Autor</a>
+        <div class="container card">
+            <div class="card-header">Autores Cadastrados</div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <th >Nome do Autor</th>
+                            <th >Ações</th>
+                        </thead >
+                        <tbody>
+                            <% autores.forEach(autor => { %>
+                                <tr>
+                                    <td><%= autor.nome %></td>
+                                    <td>
+                                        <a href="/autores/<%= autor.id %>" class="btn btn-primary">Editar</a> 
+                                        <a href="/autores/delete/<%= autor.id %>" class="btn btn-danger">Excluir</a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <div>    
+
+<%- include('../partials/footer.ejs') %>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html >
+<html lang="pt-br">
+
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu2.ejs') %>
+
+<link rel="stylesheet" type="text/css" href="../../public/css/estilo.css"></link>
+
+<body class="body">
+<section class="container">
+  <div style="margin-top: 120px; margin-bottom:120px">
+        <div >
+            <div class="card">
+                <div class="card-header">Nova Historia</div>
+                <div class="card-body">
+                    <form method="post" action="/historias/">
+                        <div class="form mb-3">
+                            <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Titulo da Historia" required></input>
+                            <label for="titulo">Nome da Historia</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" name="capitulo" class="form-control" id="capitulo" placeholder="Capitulo da Historia" required></input>
+                            <label for="capitulo">Capitulo da Historia</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" name="conteudo" class="form-control" id="conteudo" placeholder="Conteudo da Historia" required></input>
+                            <label for="conteudo">Conteudo da Historia</label>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                          <select class="form-control" name="autorId" id="autorId">
+                              <% autores.forEach(autor => { %>
+                                  <option value="<%= autor.id %>"><%= autor.nome %></option>
+                              <%})%>
+                          </select>
+                          <label for="autorId">Selecione o autor</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <select class="form-control" name="generoId" id="generoId">
+                              <% generos.forEach(genero => { %>
+                                  <option value="<%= genero.id %>"><%= genero.genero %></option>
+                              <%})%>
+                          </select>
+                          <label for="generoId">Selecione o genero</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <a href="/historias" class="btn btn-warning">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Inicio Footer -->
+  <footer style="background-image: radial-gradient(circle at 103.46% 50%, #ff67e6 0, #e75aea 12.5%, #cb4eed 25%, #a744f0 37.5%, #783cf2 50%, #1c38f4 62.5%, #0039f5 75%, #003bf7 87.5%, #003df7 100%)">
+    <div class="container w3-padding-16 ">
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4 d-flex justify-content-end ">
+          <a href="" class="btn btn-outline-light">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="" class="btn btn-outline-light ml-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="btn btn-outline-light ml-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="btn btn-outline-light ml-2">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        Created by <a class="w3-hover-opacity">Carla Oliveira, Chien Yi Shin & Leonardo Bargeri (With initial project by professor Marcos Nava)</a>
+      </div>
+    </div>
+  </footer>
+<!-- Fim Footer -->
+   
+</body>
+</html>

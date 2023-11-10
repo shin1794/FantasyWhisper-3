@@ -1,0 +1,76 @@
+<!DOCTYPE html >
+<html lang="pt-br">
+
+    <%- include('./partials/head.ejs') %>
+
+<body class="body">
+
+<!-- Inicio do Cabeçalho -->
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light" 
+        style="background-color: #660066">
+      <div class="container">
+        <div style="position: top ;">
+          <a href="" class="css/estilo.css">
+            <img src="img/modelo-de-logotipo-de-educacao-de-livro_617585-439-removebg-preview.png" width="100px"></img> <!-- Logo -->
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto" style="padding: 10px">
+            <li class="nav-item">
+              <a href="home" class="btn btn-outline-light ml-4">SAIR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!--/Fim do Cabeçalho -->
+
+<!-- Início seção login -->
+  <section id="container">
+    <div id="main-container-login">
+      <h1 class="w3-cursive">Login</h1>
+        <form method="POST" action="../principal">
+          <div class="container-fluid">
+            <div class="full-box w3-cursive">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="email"
+                placeholder="Digite o seu e-mail">
+              </input>
+              <label class="w3-cursive" for="email">E-mail</label>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="full-box w3-cursive">
+              <input
+                type="password"
+                name="senha"
+                class="form-control"
+                id="senha"
+                placeholder="Digite a sua senha">
+              </input>
+              <label class="w3-cursive" for="senha">Senha</label>
+            </div>
+          </div>
+          <br></br>
+            <% if(msg != '') {%>
+              <div class="alert alert-danger"><%= msg %></div><% } %>
+          <div class="full-box">
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+          </div>       
+        </form>
+    </div>
+  </section>
+<!-- Fim seção login -->
+
+<%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
