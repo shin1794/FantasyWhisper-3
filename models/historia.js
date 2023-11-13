@@ -3,22 +3,17 @@ const connection = require('../database/database');
 const Autor = require('./autor');
 const Genero = require('./genero');
 
-const Historia = connection.define(
-    'historia',
-    {
-        titulo: 
-        {
+const Historia = connection.define('historia', {
+        titulo: {
             type: Sequelize.STRING,
             allowNull: false
         },
-        capitulo: 
-        {
-            type: Sequelize.INTEGER,
+        capitulo: {
+            type: Sequelize.STRING,
             allowNull: false
         },
-        conteudo: 
-        {
-            type: Sequelize.STRING,
+        conteudo: {
+            type: Sequelize.TEXT,
             allowNull: false
         }
     });

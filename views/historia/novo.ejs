@@ -1,90 +1,158 @@
 <!DOCTYPE html >
 <html lang="pt-br">
 
-<%- include('../partials/head.ejs') %>
-<%- include('../partials/menu2.ejs') %>
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
 
-<link rel="stylesheet" type="text/css" href="../../public/css/estilo.css"></link>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"      
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+  </link>
+
+  <!-- Adicione isso ao cabeçalho do seu arquivo HTML -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+        crossorigin="anonymous">            
+  </link>
+
+  <!-- Estilo customizado -->
+  <link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
+
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+  <!-- Ícones do Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"></link>
+
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+
+  <link rel="shortcut icon" type="imagem/x-icon" href="img/logo2.png" width="500%"></link>
+  <title>Fantasy Whisper</title>
+</head>
+
+<!-- Inicio do Cabeçalho -->
+  <header>
+    <nav class="container navbar navbar-expand-sm navbar-light" style="background-color: #660066">
+      <div class="container">
+        <div style="position: top ;">
+          <a href="" class="css/estilo.css">
+            <img src="../img/logo.png" style="margin-top: -60px; margin-left: -20px; margin-bottom:-50px" width="48%"></img> <!-- Logo -->
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto" style="padding: 10px">
+            <li class="nav-item">
+              <a href="../historias" class="btn btn-outline-light ml-4">Voltar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!--/Fim do Cabeçalho -->
 
 <body class="body">
-<section class="container">
-  <div style="margin-top: 120px; margin-bottom:120px">
-        <div >
-            <div class="card">
-                <div class="card-header">Nova Historia</div>
-                <div class="card-body">
-                    <form method="post" action="/historias/">
-                        <div class="form mb-3">
-                            <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Titulo da Historia" required></input>
-                            <label for="titulo">Nome da Historia</label>
-                        </div>
+  <section class="container w3-padding-64">
+    <div id="main-container-login ">
+      <div class="container w3-card w3-padding-16">
+        <h1 class="card-header w3-text-white w3-indigo">Nova Historia</h1>
+          <div class="card-body">
+            <form method="POST" action="/historias">
+              <div class="form mb-3">
+                <label class="w3-cursive" for="titulo">Titulo</label>
+                  <input 
+                    type="text" 
+                    name="titulo" 
+                    class="form-control" 
+                    id="titulo" 
+                    placeholder="Digite o titulo" 
+                    required>
+                  </input>
+              </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="text" name="capitulo" class="form-control" id="capitulo" placeholder="Capitulo da Historia" required></input>
-                            <label for="capitulo">Capitulo da Historia</label>
-                        </div>
+              <div class="form-floating mb-3">
+                <label class="w3-cursive" for="capitulo">Capitulo</label>
+                  <input 
+                    type="text" 
+                    name="capitulo" 
+                    class="form-control" 
+                    id="capitulo" 
+                    placeholder="Digite o capitulo" 
+                    required>
+                  </input>
+              </div>
 
-                        <div class="form-floating mb-3">
-                            <input type="text" name="conteudo" class="form-control" id="conteudo" placeholder="Conteudo da Historia" required></input>
-                            <label for="conteudo">Conteudo da Historia</label>
-                        </div>
-                        
-                        <div class="form-floating mb-3">
-                          <select class="form-control" name="autorId" id="autorId">
-                              <% autores.forEach(autor => { %>
-                                  <option value="<%= autor.id %>"><%= autor.nome %></option>
-                              <%})%>
-                          </select>
-                          <label for="autorId">Selecione o autor</label>
-                        </div>
+              <div class="form-floating mb-3">
+                <label class="w3-cursive" for="conteudo">Conteudo</label>
+                  <input 
+                    type="text" 
+                    name="conteudo" 
+                    class="form-control" 
+                    id="conteudo" 
+                    placeholder="Digite a historia" 
+                    rows="3" 
+                    required>
+                  </input>
+              </div>
+                    
+              <div class="form-floating mb-3">
+              <label class="w3-cursive" for="autorId">Selecione o autor</label>
+                <select 
+                  class="form-control" 
+                  name="autorId" 
+                  id="autorId">
+                    <% autores.forEach(autor => { %>
+                        <option value="<%= autor.id %>"><%= autor.nome %></option>
+                    <%})%>
+                </select>
+              </div>
 
-                        <div class="form-floating mb-3">
-                          <select class="form-control" name="generoId" id="generoId">
-                              <% generos.forEach(genero => { %>
-                                  <option value="<%= genero.id %>"><%= genero.genero %></option>
-                              <%})%>
-                          </select>
-                          <label for="generoId">Selecione o genero</label>
-                        </div>
+              <div class="form-floating mb-3">
+              <label class="w3-cursive" for="generoId">Selecione o genero</label>
+                <select 
+                  class="form-control" 
+                  name="generoId" 
+                  id="generoId">
+                    <% generos.forEach(genero => { %>
+                        <option value="<%= genero.id %>"><%= genero.genero %></option>
+                    <%})%>
+                </select>
+              </div>
 
-                        <div class="form-floating mb-3">
-                            <button type="submit" class="btn btn-primary">Salvar</button>
-                            <a href="/historias" class="btn btn-warning">Cancelar</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+              <div class="form-floating mb-3">
+                <button 
+                  type="submit" 
+                  class="btn btn-primary">Salvar
+                </button>
+                <a href="/historias" class="btn btn-warning">Cancelar</a>
+              </div>
+            </form>
+          </div>
         </div>
     </div>
-</section>
+  </section>
 
-<!-- Inicio Footer -->
-  <footer style="background-image: radial-gradient(circle at 103.46% 50%, #ff67e6 0, #e75aea 12.5%, #cb4eed 25%, #a744f0 37.5%, #783cf2 50%, #1c38f4 62.5%, #0039f5 75%, #003bf7 87.5%, #003df7 100%)">
-    <div class="container w3-padding-16 ">
-      <div class="row">
-        <div class="col-md-8">
-        </div>
-        <div class="col-md-4 d-flex justify-content-end ">
-          <a href="" class="btn btn-outline-light">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="" class="btn btn-outline-light ml-2">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="btn btn-outline-light ml-2">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="btn btn-outline-light ml-2">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      <div>
-        Created by <a class="w3-hover-opacity">Carla Oliveira, Chien Yi Shin & Leonardo Bargeri (With initial project by professor Marcos Nava)</a>
-      </div>
-    </div>
-  </footer>
-<!-- Fim Footer -->
-   
+  <%- include('../partials/footer.ejs') %>
+
 </body>
 </html>

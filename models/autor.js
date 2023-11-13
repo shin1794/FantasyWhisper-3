@@ -10,7 +10,7 @@ const Autor = connection.define(
         },
         nascimento: {
             type: Sequelize.DATE,
-            allowNull: false
+            allowNull: true
         },
         morte: {
             type: Sequelize.DATE

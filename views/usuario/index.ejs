@@ -10,15 +10,14 @@
         style="background-color: #660066">
       <div class="container">
         <div style="position: top ;">
-          <a href="" class="css/estilo.css">
-            <img src="img/modelo-de-logotipo-de-educacao-de-livro_617585-439-removebg-preview.png" width="100px"></img> <!-- Logo -->
+            <img src="img/logo.png" style="margin-top: -60px; margin-left: -20px; margin-bottom:-60px" width="36%"></img> <!-- Logo -->
           </a>
         </div>
 
         <div class="collapse navbar-collapse" id="nav-principal">
           <ul class="navbar-nav ml-auto" style="padding: 10px">
             <li class="nav-item">
-              <a href="home" class="btn btn-outline-light ml-4">Sair</a>
+              <a href="../historias" class="btn btn-outline-light ml-4">Sair</a>
             </li>
           </ul>
         </div>
@@ -27,10 +26,10 @@
   </header>
 <!--/Fim do Cabeçalho -->
 
-    <section>
-        <div class="container">
+    <section class="container w3-padding-64">
+        <div class="container w3-padding-64">
             <div id="fundo">
-                <a href="/usuarios/novo" class="btn btn-primary">Novo Usuário</a>
+            <a href="/usuarios/novo" class="btn btn-primary">Novo Usuário</a>
                 <br>
                 <div class="card">
                     <div class="card-header">
@@ -52,7 +51,6 @@
                                         <td>
                                             <a href="/usuarios/<%= usuario.id %>" class="btn btn-primary">Editar</a>
                                             <a href="/usuarios/delete/<%= usuario.id %>" class="btn btn-danger">Excluir</a>
-                                            <a href="/home" class="btn btn-primary">Cancelar</a>
                                         </td>
                                     </tr>
                                 <% }) %>

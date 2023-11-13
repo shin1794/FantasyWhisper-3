@@ -1,16 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<%- include('../partials/head.ejs') %>
-<%- include('../partials/menu2.ejs') %>
-<body>
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"      
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous">
+  </link>
+
+  <!-- Adicione isso ao cabeçalho do seu arquivo HTML -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+        crossorigin="anonymous">            
+  </link>
+
+  <!-- Estilo customizado -->
+  <link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
+
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"></link>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+  <!-- Ícones do Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"></link>
+
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+
+  <link rel="shortcut icon" type="imagem/x-icon" href="img/logo2.png" width="500%"></link>
+  <title>Fantasy Whisper</title>
+</head>
+
+<!-- Inicio do Cabeçalho -->
+  <header>
+    <nav class="container navbar navbar-expand-sm navbar-light" style="background-color: #660066">
+      <div class="container ">
+        <div style="position: top ;">
+          <a href="" class="css/estilo.css">
+            <img src="../img/logo.png" style="margin-top: -30px; margin-left: -5px; margin-bottom:-30px" width="36%"></img> <!-- Logo -->
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto" style="padding: 10px">
+            <li class="nav-item">
+              <a href="../historias" class="btn btn-outline-light ml-4">Voltar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<!--/Fim do Cabeçalho -->
+
+<body>
 <br>
-<div class="container">
+<div class="container w3-padding-64">
     <div class="card">
         <div class="card-header">Editar Autor</div>
         <div class="card-body">
-            <form method="POST" action="/autors/salvar">  <!-- Envia os dados para a rota "/autores/salvar" quando o formulário é enviado -->
+            <form method="POST" action="/autores/salvar">  <!-- Envia os dados para a rota "/autores/salvar" quando o formulário é enviado -->
                 <input type="hidden" name="id" value="<%= autor.id %>"></input>
                 <div class="form-floating mb-3">
                     <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome do Autor" value="<%= autor.nome %>" required></input>

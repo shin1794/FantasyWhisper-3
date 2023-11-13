@@ -1,49 +1,62 @@
-<%- include('../partials/head.ejs') %>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<br>
-<div class="container">
-    <div class="card">
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/menu2.ejs') %>
+
+<body>
+  <section>
+    <br>
+    <div class="container">
+      <div class="card">
         <div class="card-header">
-            Editar Usuário
+          Editar Usuário
         </div>
 
         <div class="card-body">
-            <form method="POST" action="/usuarios/salvar">
-                <input type="hidden" name="id" value="<%= usuario.id %>">
-                <div class="form-floating mb-3">
-                    <input 
-                        type="hidden" 
-                        name="id" 
-                        id="nome" 
-                        class="form-control" 
-                        placeholder="Nome do usuário" 
-                        value="<%= usuario ? usuario.id: '' %>"
-                        required>
-                    </input>
-                    <label for="nome">Nome do usuário</label>
-                </div>
-                </input>
+          <form method="POST" action="/usuarios/salvar">
+            <input type="hidden" name="id" value="<%= usuario.id %>">
+              <div class="form-floating mb-3">
+                <label for="nome">Nome do usuário</label>
+                  <input 
+                    type="hidden" 
+                    name="id" 
+                    id="nome" 
+                    class="form-control" 
+                    placeholder="Nome do usuário" 
+                    value="<%= usuario ? usuario.id: '' %>"
+                    required>
+                  </input>
+              </div>
+            </input>
 
-                <div class="form-floating mb-3">
-                    <input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
-                        class="form-control" 
-                        placeholder="E-mail" 
-                        value="<%= usuario.email %>"
-                        required>
-                    </input>
-                    <label for="email">E-mail</label>
-                </div>
-                
-                <div class="form-floating mb-3">
-                    <button type="submit" class="btn btn-primary">Alterar</button>
-                    <a href="/usuarios" class="btn btn-warning">Cancelar</a>
-                </div>
-            </form>
+            <div class="form-floating mb-3">
+              <label for="email">E-mail</label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  id="email" 
+                  class="form-control" 
+                  placeholder="E-mail" 
+                  value="<%= usuario.email %>"
+                  required>
+                </input>
+            </div>
+                    
+            <div class="form-floating mb-3">
+              <button 
+                type="submit" 
+                class="btn btn-primary">Alterar
+              </button>
+              <a href="/usuarios" class="btn btn-warning">Cancelar</a>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-</div>
+  </section>
 
 <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>

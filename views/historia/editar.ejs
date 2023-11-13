@@ -4,7 +4,7 @@
 <%- include('../partials/head.ejs') %>
 <%- include('../partials/menu2.ejs') %>
 
-<link rel="stylesheet" type="text/css" href="../../public/css/estilo.css"></link>
+<link rel="stylesheet" type="text/css" href="../css/estilo.css"></link>
 
 <body>
     <section class="container">
@@ -15,7 +15,7 @@
                     Editar História
                 </div>
                     <div class="card-body">
-                        <form method="POST" action="/historia/salvar">
+                        <form method="POST" action="/historias/salvar">
                         <input type="hidden" name="id" value="<%= historia.id %>"></input>
                         <div class="form-floating mb-3">
                             <input 
@@ -26,7 +26,7 @@
                                 placeholder="Titulo da História" 
                                 value="<%= historia.titulo %>"
                                 required>
-                            <label for="historia">Tituo da História</label>
+                            <label for="historia">Titulo da História</label>
                             </input>
                         </div>
 

@@ -41,48 +41,35 @@ const Usuario = require('./models/usuario');
 const Genero = require('./models/genero');
 const Autor = require('./models/autor');
 const Historia = require('./models/historia');
-const Principal = require('./models/principal');
 
 // Importar Rotas
 const usuarioRoute = require('./routes/usuarioRoute');
 const generoRoute = require('./routes/generoRoute');
 const autorRoute = require('./routes/autorRoute');
 const historiaRoute = require('./routes/historiaRoute');
-const principalRoute = require('./routes/principalRoute');
 
 // Rotas
-app.get('/',  (req, res, next) => {
+app.get('/', (req, res, next) => {
   res.render('app');
 });
 
 //Rota da página Home
-app.get('/home', (req, res, next) =>{
+app.get('/home', (req, res, next) => {
   res.render('home');
 });
 
 //Rota da página login
-app.get('/login', (req, res, next) =>{
-  res.render('login', {msg:''});
+app.get('/login', (req, res, next) => {
+res.render('login', {msg:''});
 });
 
-//Rota da página Principal (Perfil)
-app.get('/principal', (req, res, next) =>{
-  res.render('principal');
-});
-
-//Rota da página Principal (Perfil)
-app.post('/principal', (req, res, next) =>{
-  res.render('principal');
+app.post('/login', (req, res, next) => {
+res.render('login', {msg:''});
 });
 
 //Rota da página Genero 
 app.get('/gender', (req, res, next) =>{
   res.render('gender');
-});
-
-//Rota da página Popular
-app.get('/popular', (req, res, next) =>{
-  res.render('popular');
 });
 
 //Rota da página Histórias
@@ -94,6 +81,5 @@ app.use('/usuarios', usuarioRoute);
 app.use('/generos', generoRoute);
 app.use('/autores', autorRoute);
 app.use('/historias', historiaRoute);
-app.use('/principais', principalRoute);
 
 module.exports = app;
